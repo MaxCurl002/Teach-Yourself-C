@@ -1,0 +1,17 @@
+This is input file.
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#define EXIT(str) {printf("Error!%s\n",str);exit(1);}
+
+int main(int argc, char* argv[]){
+	if(argc!=3)EXIT("insufficient args.");
+	FILE* fp;
+	fp=fopen(argv[1],"r");
+	if(fp==NULL) EXIT("Error opening source file.");
+	
+	if(fclose(fp)==EOF)EXIT("Error closing destiatio file.");
+return 0;
+}
+425 is a number.
